@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %} <!-- base.html模板继承自bootstrap/base.html -->
+{% block title %}Flask{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+<div class="container">
+
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+    <a class="navbar-brand" href="/">Home</a>
+    <a class="navbar-brand" href="/hello/">Resume</a>
+    <a class="navbar-brand" href="/form/">Form</a>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+    <li class="navbar-right">
+        <a class="navbar-brand" href="/">Contact me</a>
+    </li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+{% block page_content %}{% endblock %}
+</div>
+{% endblock %}
