@@ -13,5 +13,5 @@ def make_shell_context():
 manager.add_command("shell", Shell(make_context=make_shell_context))
 if __name__ == '__main__':
 
-    #execute python manage.py with parameters -h 0.0.0.0 -p port
+    #execute python manage.py with parameters 'runserver -h 0.0.0.0 -p port'
     manager.run()
