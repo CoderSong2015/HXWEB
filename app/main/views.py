@@ -3,11 +3,14 @@ __author__ = 'Mrsong'
 from . import main
 from .forms import NameForm
 from flask import render_template
-
+from  flask_login import login_required
 #带斜线会默认所有的URL都带斜线
+
 @main.route('/hello/')
+@login_required
 def hello():
-    return render_template('helloworld.html')
+    return 'login requereifesf'
+    #return render_template('login.html')
 
 @main.route('/form/' , methods=['GET','POST'])
 def form():
