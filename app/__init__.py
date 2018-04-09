@@ -4,7 +4,7 @@ from flask import  Flask
 from flask_bootstrap import Bootstrap
 from app.config import config
 from flask_login import LoginManager
-
+from flask_sqlalchemy import SQLAlchemy
 bootstrap = Bootstrap()
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
