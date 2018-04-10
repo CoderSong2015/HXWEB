@@ -9,8 +9,8 @@ from  flask_login import login_required
 @main.route('/hello/')
 @login_required
 def hello():
-    return 'login requereifesf'
-    #return render_template('login.html')
+    #return 'login requereifesf'
+    return render_template('login.html')
 
 @main.route('/form/' , methods=['GET','POST'])
 def form():
