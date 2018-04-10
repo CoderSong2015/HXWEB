@@ -1,16 +1,15 @@
 __author__ = 'Mrsong'
 
 from flask_script import Manager,Shell
-from app import create_app
+from app import create_app,db
 from app.models import User
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate,MigrateCommand
 app = create_app('default')
-db = SQLAlchemy(app)
 manager = Manager(app)
 migrate = Migrate(app, db)
 
-db.create_all()
+#db.create_all()
 print('asd')
 #test
 def make_shell_context():
