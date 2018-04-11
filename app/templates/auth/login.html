@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 {% block title %}Helloworld{% endblock %}
 {% block page_content %}
-
-<h2>Hello world!</h2>
-
-
-Technorati Tags: flask  bgfraretf
+<div class = "page-header">
+    <h2>Login</h2>
+</div>
+<div class = "col-md-4">
+    {{ wtf.quick_form(form)}}
+</div>
 
 {% endblock %}
-
