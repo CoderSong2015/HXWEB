@@ -3,7 +3,7 @@ __author__ = 'Mrsong'
 from . import auth
 from flask import render_template, redirect,flash,request,url_for
 from .forms import LoginForm
-from flask_login import login_user
+from flask_login import login_user,logout_user
 from ..models import User
 @auth.route('/login/' , methods=['GET','POST'])
 def login():
@@ -31,3 +31,8 @@ def login():
         flash('invalid user name or password')
     return render_template('auth/login.html', form=form)
 
+@auth.route('/logout/' , methods=['GET','POST'])
+def logout():
+    logout_user()
+    flash('Log out!')
+    return redirect(url_for('main.index'))
