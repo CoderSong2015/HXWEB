@@ -13,7 +13,7 @@ __pycache__/
 *.ntvs*
 *.njsproj
 *.sln
-
+.idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -35,13 +35,6 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
 
 # Sphinx documentation
 docs/_build/
