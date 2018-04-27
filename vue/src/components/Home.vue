@@ -1,7 +1,7 @@
 <style scoped>
 .layout{
     border: 1px solid #d7dde4;
-    background: #f5f7f9;
+    background: #5b6270;
     position: relative;
     border-radius: 4px;
     overflow: hidden;
@@ -17,7 +17,7 @@
     left: 20px;
 }
 .layout-nav{
-    width: 420px;
+    width: 120px;
     margin: 0 auto;
     margin-right: 20px;
 }
@@ -28,30 +28,18 @@
 <template>
     <div class="layout">
         <Layout>
+          <div style="height: 1280px;">
             <Header>
                 <Menu mode="horizontal" theme="dark" active-name="1">
-                    <div class="layout-logo"></div>
                     <div class="layout-nav">
-                        <MenuItem name="1">
-                            <Icon type="ios-navigate"></Icon>
-                            Item 1
-                        </MenuItem>
-                        <MenuItem name="2">
-                            <Icon type="ios-keypad"></Icon>
-                            Item 2
-                        </MenuItem>
-                        <MenuItem name="3">
-                            <Icon type="ios-analytics"></Icon>
-                            Item 3
-                        </MenuItem>
                         <MenuItem name="4">
-                            <Icon type="ios-paper"></Icon>
-                            Item 4
+                            <Icon type="flash"></Icon>
+                            Home
                         </MenuItem>
                     </div>
                 </Menu>
             </Header>
-            <Content :style="{padding: '0 50px'}">
+            <Content :style="{padding: '0 100px'}">
                 <Breadcrumb :style="{margin: '20px 0'}">
                     <BreadcrumbItem>Home</BreadcrumbItem>
                     <BreadcrumbItem>Components</BreadcrumbItem>
@@ -64,6 +52,7 @@
                 </Card>
             </Content>
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
+          </div>
         </Layout>
     </div>
 </template>
