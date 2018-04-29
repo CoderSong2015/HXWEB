@@ -24,6 +24,20 @@
 .layout-footer-center{
     text-align: center;
 }
+.layout-Content{
+    height:700px;
+}
+.circle{
+     width: 100px;    
+     margin-left: auto;
+     margin-right: auto;  
+     height: 100px;      
+     //background-color:red;      
+     border-radius: 50%;      
+     -moz-border-radius: 50%;      
+     -webkit-border-radius: 50%;
+     //left: 50%;
+}
 </style>
 <template>
     <div class="layout">
@@ -40,16 +54,11 @@
                 </Menu>
             </Header>
             <Content :style="{padding: '0 100px'}">
-                <Breadcrumb :style="{margin: '20px 0'}">
-                    <BreadcrumbItem>Home</BreadcrumbItem>
-                    <BreadcrumbItem>Components</BreadcrumbItem>
-                    <BreadcrumbItem>Layout</BreadcrumbItem>
-                </Breadcrumb>
-                <Card>
-                    <div style="min-height: 200px;">
-                        Content
+                <div class="layout-Content">
+                    <div>
+                        <img class = "circle" src="../assets/logo.png">
                     </div>
-                </Card>
+                </div>
             </Content>
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
           </div>
