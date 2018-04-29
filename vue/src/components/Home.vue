@@ -20,6 +20,7 @@
     width: 120px;
     margin: 0 auto;
     margin-right: 20px;
+    
 }
 .layout-footer-center{
     text-align: center;
@@ -28,15 +29,21 @@
     height:700px;
 }
 .circle{
-     width: 100px;    
-     margin-left: auto;
-     margin-right: auto;  
-     height: 100px;      
+     width: 150px;    
+     //margin-left: auto;
+     //margin-right: auto;  
+     height: 150px;      
      //background-color:red;      
      border-radius: 50%;      
      -moz-border-radius: 50%;      
      -webkit-border-radius: 50%;
      //left: 50%;
+}
+.img_div{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;  
 }
 </style>
 <template>
@@ -44,7 +51,7 @@
         <Layout>
           <div style="height: 1280px;">
             <Header>
-                <Menu mode="horizontal" theme="dark" active-name="1">
+                <Menu mode="horizontal" theme="dark" active-name="1" >
                     <div class="layout-nav">
                         <MenuItem name="4">
                             <Icon type="flash"></Icon>
@@ -55,9 +62,9 @@
             </Header>
             <Content :style="{padding: '0 100px'}">
                 <div class="layout-Content">
-                    <div>
-                        <img class = "circle" src="../assets/logo.png">
-                    </div>
+                    <div class="img_div">
+                        <img class = "circle" src="../assets/touxiang.png">
+                   </div>
                 </div>
             </Content>
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
