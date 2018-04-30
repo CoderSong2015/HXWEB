@@ -28,6 +28,7 @@
 .layout-Content{
     height:780px;
     background: #ffffff;
+    padding: 1px 100px;
 }
 .header{
     
@@ -91,6 +92,24 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
+.hr {
+    height: 0;
+    font-size: 1em;
+    line-height: 0;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #A7ADBA;
+    margin-top: 3em;
+    margin-bottom: 1.2em;
+    cursor: default;
+    user-select: none;
+}
+.hr span {
+    background-color: #fff;
+    padding-left: .5em;
+    padding-right: .5em;
+    color: #A7ADBA;
+}
 </style>
 <template>
     <div class="layout">
@@ -116,12 +135,14 @@ li {
                 </ul>
             </nav>
             </header>
-            <Content class="layout-Content" :style="{padding: '1px 100px'}">
-                <div >
-                    <div class="img_div">
+            
+                
+           
+            <Content class="layout-Content" >
+                <h2 class="hr">
+                    <span>About Me</span>
+                </h2>   
                         
-                   </div>
-                </div>
             </Content>
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
           </div>
