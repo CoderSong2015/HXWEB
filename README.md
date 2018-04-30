@@ -1,6 +1,8 @@
 # HXWEB
 
 ## I need a PM...!
+   It's my first time to use html 、css 、vue.js.
+   So exciting~!
 
 ## Target
     1、Blog
