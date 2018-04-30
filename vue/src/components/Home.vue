@@ -26,44 +26,51 @@
     text-align: center;
 }
 .layout-Content{
-    height:700px;
+    height:780px;
+    background: #ffffff;
+}
+.header{
+    
 }
 .circle{
-     width: 150px;    
-     //margin-left: auto;
-     //margin-right: auto;  
-     height: 150px;      
-     //background-color:red;      
-     border-radius: 50%;      
-     -moz-border-radius: 50%;      
-     -webkit-border-radius: 50%;
-     //left: 50%;
+     margin:0 auto;
+     width: 128px;     
+     height: 128px;       
+     border-radius: 50%;
+     margin-top: 6em;
 }
 .img_div{
-    width: 100px;
+    width: 70px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px;  
+    margin-top: 50px;  
+}
+.head{
+    text-align: center;
+    background: #ffffff;
+
+}
+.name{
+    font-family: -apple-system, BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1em;
 }
 </style>
 <template>
     <div class="layout">
         <Layout>
-          <div style="height: 1280px;">
-            <Header>
-                <Menu mode="horizontal" theme="dark" active-name="1" >
-                    <div class="layout-nav">
-                        <MenuItem name="4">
-                            <Icon type="flash"></Icon>
-                            Home
-                        </MenuItem>
-                    </div>
-                </Menu>
-            </Header>
-            <Content :style="{padding: '0 100px'}">
-                <div class="layout-Content">
+          <div style="height: 100%;">
+            
+            <div class = "head">
+                <img class = "circle" src="../assets/touxiang2.jpg">
+                <p class = "name">Leo Song</p>
+            </div>
+            
+            <Content class="layout-Content" :style="{padding: '1px 100px'}">
+                <div >
                     <div class="img_div">
-                        <img class = "circle" src="../assets/touxiang.png">
+                        
                    </div>
                 </div>
             </Content>
