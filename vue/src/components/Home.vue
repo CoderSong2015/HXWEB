@@ -56,17 +56,63 @@
     font-weight: bold;
     margin-top: 1em;
 }
+.desc{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-top: 1em;
+    opacity: .8;
+}
+nav {
+    padding: 3em;
+    background: #ffffff;
+}
+
+nav .nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav .nav .nav-item{
+    display: inline-block;
+    background: #ffffff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    margin-right: .5em
+}
+a {
+    color:black;
+    text-decoration: underline;
+}
+li {
+    
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
 </style>
 <template>
     <div class="layout">
         <Layout>
           <div style="height: 100%;">
-            
+            <header>
             <div class = "head">
                 <img class = "circle" src="../assets/touxiang2.jpg">
                 <p class = "name">Leo Song</p>
+                <p class = "desc">Software Engineer. Blogging about life and tech</p>
             </div>
-            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a  href="/" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/">Timeline</a>
+                    </li>
+                </ul>
+            </nav>
+            </header>
             <Content class="layout-Content" :style="{padding: '1px 100px'}">
                 <div >
                     <div class="img_div">
