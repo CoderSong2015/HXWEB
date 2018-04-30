@@ -7,7 +7,7 @@
   <div id="app">
     <header>
             <div class = "head">
-                <img class = "circle" src="./assets/touxiang2.jpg">
+                <img class = "circle" src="../static/touxiang2.jpg">
                 <p class = "name">Leo Song</p>
                 <p class = "desc">Software Engineer. Blogging about life and tech.</p>
             </div>
