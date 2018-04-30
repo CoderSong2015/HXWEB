@@ -100,7 +100,7 @@ li {
             <div class = "head">
                 <img class = "circle" src="../assets/touxiang2.jpg">
                 <p class = "name">Leo Song</p>
-                <p class = "desc">Software Engineer. Blogging about life and tech</p>
+                <p class = "desc">Software Engineer. Blogging about life and tech.</p>
             </div>
             <nav>
                 <ul class="nav">
@@ -109,6 +109,9 @@ li {
                     </li>
                     <li class="nav-item">
                         <a href="/">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/">About me</a>
                     </li>
                 </ul>
             </nav>
