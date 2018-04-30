@@ -1,34 +1,9 @@
 <style scoped>
- @import '../assets/style/main.css'
+ @import '../assets/style/main.css';
 
 </style>
 <template>
-    <div class="layout">
-        <Layout class="layout">
           <div style="height: 100%;">
-            <header>
-            <div class = "head">
-                <img class = "circle" src="../assets/touxiang2.jpg">
-                <p class = "name">Leo Song</p>
-                <p class = "desc">Software Engineer. Blogging about life and tech.</p>
-            </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a  href="/" >Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/">Timeline</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/about">About me</a>
-                    </li>
-                </ul>
-            </nav>
-            </header>
-            
-                
-           
             <Content class="layout-Content" >
                 <h2 class="hr">
                     <span>About Me</span>
@@ -41,10 +16,8 @@
                     <span>Posts</span>
                 </h2>           
             </Content>
-            <Footer class="layout-footer-center">2015-2018 &copy; Leo's Blog</Footer>
           </div>
-        </Layout>
-    </div>
+    
 </template>
 
 
