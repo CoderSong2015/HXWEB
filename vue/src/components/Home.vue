@@ -1,21 +1,13 @@
 <style scoped>
+
 .layout{
     border: 1px solid #d7dde4;
-    background: #5b6270;
+    background: #FFFFFF;
     position: relative;
     border-radius: 4px;
     overflow: hidden;
 }
-.layout-logo{
-    width: 100px;
-    height: 30px;
-    background: #5b6270;
-    border-radius: 3px;
-    float: left;
-    position: relative;
-    top: 15px;
-    left: 20px;
-}
+
 .layout-nav{
     width: 120px;
     margin: 0 auto;
@@ -24,9 +16,12 @@
 }
 .layout-footer-center{
     text-align: center;
+    margin-top:2em;
 }
 .layout-Content{
-    height:780px;
+    width:740px;
+    height: 700px;
+    margin:0 auto;
     background: #ffffff;
     padding: 1px 100px;
 }
@@ -110,10 +105,14 @@ li {
     padding-right: .5em;
     color: #A7ADBA;
 }
+.about_me{
+    font-size: 14px;
+    color:black;
+}
 </style>
 <template>
     <div class="layout">
-        <Layout>
+        <Layout class="layout">
           <div style="height: 100%;">
             <header>
             <div class = "head">
@@ -142,7 +141,10 @@ li {
                 <h2 class="hr">
                     <span>About Me</span>
                 </h2>   
-                        
+                <p class="about_me">
+                    My name is Leo Song(宋昊霖). I was born in 1994. I used C/C++, Java, Python and Go. Now I focus on
+                    distributed database development and currently work at <b>Esgyn.inc</b>
+                </p>        
             </Content>
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
           </div>
