@@ -1,2 +1,0 @@
-webpackJsonp([1],{c27y:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var e=this.$createElement,t=this._self._c||e;return t("div",{attrs:{id:"app"}},[t("p",[this._v(" About")])])}]},s=n("Z0/y")(null,r,!1,null,null,null);t.default=s.exports}});
-//# sourceMappingURL=1.7f7814027cf89a4f5ae4.js.map
