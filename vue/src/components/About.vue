@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <p> About random number {{ randomNumber }}</p>
+    <span v-html="htmlData">
+      {{ htmlData }}
+    </span>
   </div>
 </template>
 
@@ -23,12 +26,26 @@ methods: {
         max = Math.floor(max)
         return Math.floor(Math.random() * (max - min + 1)) + min
     },
-
+    getHtml(){
+        this.htmlData = this.htmlTest()
+    },
     getRandom () {
     //this.randomNumber = this.getRandomInt(1, 100)
         this.randomNumber = this.getRandomFromBackend()
     },
-    
+    htmlTest(){
+        const path = 'http://localhost:5000/api/html'
+        axios.get(path)
+        .then(
+          response => {
+            this.htmlData = response
+          })
+          .catch(
+            error => {
+              console.log(error)
+            }
+          )
+    },
     getRandomFromBackend(){
         const path = 'http://localhost:5000/api/random'
         axios.get(path)
@@ -46,7 +63,8 @@ methods: {
 },
 
 created () {
-this.getRandom()
+    this.getRandom()
+    this.getHtml()
 }
 
 }

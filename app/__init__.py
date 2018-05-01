@@ -11,11 +11,11 @@ login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 
 def create_app(config_name):
-   # app = Flask(__name__)
-    app = Flask(__name__,
-                static_folder="../dist/static",
-                template_folder="../dist"
-                )
+    app = Flask(__name__)
+   # app = Flask(__name__,
+   #             static_folder="../dist/static",
+  #              template_folder="../dist"
+   #             )
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
     bootstrap.init_app(app)

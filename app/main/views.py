@@ -2,8 +2,9 @@ __author__ = 'Mrsong'
 
 from . import main
 from .forms import NameForm
-from flask import render_template, jsonify
+from flask import render_template, jsonify,send_from_directory
 from  flask_login import login_required
+import os
 #带斜线会默认所有的URL都带斜线
 
 @main.route('/hello/')
@@ -40,3 +41,9 @@ def randomNumber():
     response.headers['Access-Control-Allow-Methods'] = 'POST'
     response.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
     return response
+
+@main.route('/api/html')
+def htmltest():
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "")  # html是个文件夹
+    print(root)
+    return send_from_directory(root, 'test.html')
