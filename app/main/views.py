@@ -22,9 +22,9 @@ def form():
     return render_template('form.html', form=form,name=name)
 
 
-
-@main.route('/')
-def index():
+@main.route('/',defaults = {'path':''})
+@main.route('/<path:path>')
+def index(path):
     return render_template("index.html")
 
 
