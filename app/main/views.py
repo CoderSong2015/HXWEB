@@ -23,7 +23,7 @@ def form():
 
 
 @main.route('/',defaults = {'path':''})
-@main.route('/<path:path>')
+
 def index(path):
     return render_template("index.html")
 
@@ -35,4 +35,8 @@ def randomNumber():
     response = {
         'randomNumber': 233
     }
-    return jsonify(response)
+    response = jsonify(response)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'POST'
+    response.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
+    return response
