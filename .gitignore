@@ -53,3 +53,7 @@ Include/
 *.pyc
 *~
 /vendor
+
+
+#vue
+dist/
