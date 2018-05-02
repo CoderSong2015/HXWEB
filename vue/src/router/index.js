@@ -4,7 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 
 const routerOption = [
   { path: '/', component : 'Home'},
-  { path: '/about', component: 'About'}
+  { path: '/about', component: 'About'},
+  { path: '/timeline', component: 'Timeline'}
 ]
 
 const routes = routerOption.map( route => {

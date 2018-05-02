@@ -17,7 +17,7 @@
                         <a  href="/" >Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/">Timeline</a>
+                        <a href="/timeline">Timeline</a>
                     </li>
                     <li class="nav-item">
                         <a href="/about">About me</a>
