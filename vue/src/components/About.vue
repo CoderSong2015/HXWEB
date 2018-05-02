@@ -1,9 +1,12 @@
 <template>
   <div id="app">
+    <div>
     <p> About random number {{ randomNumber }}</p>
-    <span v-html="htmlData">
-      {{ htmlData }}
-    </span>
+    </div>
+    <div>
+        <span v-html="htmlData">
+        </span>
+    </div>
   </div>
 </template>
 
@@ -17,6 +20,7 @@ data () {
 return {
     single: true,
     randomNumber: 0,
+    htmlData:null,
 }
 },
 
@@ -38,7 +42,8 @@ methods: {
         axios.get(path)
         .then(
           response => {
-            this.htmlData = response
+            this.htmlData = response.data;
+            console.log("dsada " + response.data);
           })
           .catch(
             error => {

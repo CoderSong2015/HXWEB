@@ -4,7 +4,7 @@ from flask import  Flask
 from flask_bootstrap import Bootstrap
 from app.config import config
 from flask_login import LoginManager
-
+from flask_cors import *
 bootstrap = Bootstrap()
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
@@ -12,6 +12,7 @@ login_manager.login_view = 'auth.login'
 
 def create_app(config_name):
     app = Flask(__name__)
+    CORS(app, supports_credentials=True)
    # app = Flask(__name__,
    #             static_folder="../dist/static",
   #              template_folder="../dist"
