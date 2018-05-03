@@ -70,6 +70,7 @@ methods: {
 created () {
     this.getRandom()
     this.getHtml()
+    console.log(this.$route)
 }
 
 }

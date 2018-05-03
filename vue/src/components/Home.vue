@@ -17,9 +17,8 @@
                 </h2>
                 <ul>
                     <li v-for="item in articleInfo">
-                        <a :href=" item.url ">
-                            <span>{{item.name}}</span>
-                        </a>
+                         
+                        <router-link :to="{ name: 'about', params: { userId: 123 }}">{{ item.name }}</router-link>
                     </li>
                     
                 </ul>          
@@ -35,11 +34,15 @@ import axios from 'axios'
 export default {
     data () {
         return {
-            articleInfo: [{'name':'song','url':'about'},{'name':'test','url':'/'}]
+            articleInfo: [{ 'name':'song',id:1},{'name':'test',id:2}]
         }
     },
 
     methods: {
+        select(event) {
+            console.log(event.currentTarget);
+            console.log(event.target);
+        },
         getArticleInfo() {
             const path = 'http://localhost:5000/api/articleInfo'
             axios.get(path)
@@ -56,7 +59,8 @@ export default {
     },
 
     created () {
-        this.getArticleInfo()
+        this.getArticleInfo(),
+        console.log(this.$route)
     }
 
 }
