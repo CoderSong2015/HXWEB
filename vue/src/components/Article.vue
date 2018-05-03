@@ -6,7 +6,8 @@
           <div style="height: 100%;">
             <Content class="layout-Content" >
                 <div>
-                    
+                    <span v-html="htmlData">
+                    </span>
                 </div>
             </Content>
           </div>
@@ -20,8 +21,8 @@ import axios from 'axios'
 export default {
     data () {
         return {
-            articleInfo: [{ 'name':'song',id:1},{'name':'test',id:2}],
-            articleID : -1
+            articleID : -1,
+            htmlData :null
         }
     },
 
@@ -37,7 +38,7 @@ export default {
             )
             .then(
                 response => {
-                this.articleInfo = response.data.articleInfo 
+                this.htmlData = response.data
                 console.log(this.articleInfo)
             })
             .catch(
