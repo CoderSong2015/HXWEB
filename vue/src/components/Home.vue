@@ -14,7 +14,15 @@
                 </p>
                 <h2 class="hr">
                     <span>Posts</span>
-                </h2>           
+                </h2>
+                <ul>
+                    <li v-for="item in articleName">
+                        <a :href=" item.url ">
+                            <span>{{item.name}}</span>
+                        </a>
+                    </li>
+                    
+                </ul>          
             </Content>
           </div>
     
@@ -25,44 +33,19 @@
 
 import axios from 'axios'
 export default {
-data () {
-return {
-    single: true,
-    randomNumber: 0
-}
-},
-
-methods: {
-    getRandomInt (min, max) {
-        min = Math.ceil(min) 
-        max = Math.floor(max)
-        return Math.floor(Math.random() * (max - min + 1)) + min
+    data () {
+        return {
+            articleName: [{'name':'song','url':'about'},{'name':'test','url':'/'}]
+        }
     },
 
-    getRandom () {
-    //this.randomNumber = this.getRandomInt(1, 100)
-        this.randomNumber = this.getRandomFromBackend()
-    },
+    methods: {
     
-    getRandomFromBackend(){
-        const path = 'http://localhost:5000/api/random'
-        axios.get(path)
-        .then(
-          response => {
-            this.randomNumber = response.data.randomNumber 
-          })
-          .catch(
-            error => {
-              console.log(error)
-            }
-          )
+    },
+
+    created () {
+    
     }
-
-},
-
-created () {
-this.getRandom()
-}
 
 }
 
