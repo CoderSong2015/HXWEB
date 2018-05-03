@@ -16,7 +16,7 @@
                     <span>Posts</span>
                 </h2>
                 <ul>
-                    <li v-for="item in articleName">
+                    <li v-for="item in articleInfo">
                         <a :href=" item.url ">
                             <span>{{item.name}}</span>
                         </a>
@@ -35,16 +35,28 @@ import axios from 'axios'
 export default {
     data () {
         return {
-            articleName: [{'name':'song','url':'about'},{'name':'test','url':'/'}]
+            articleInfo: [{'name':'song','url':'about'},{'name':'test','url':'/'}]
         }
     },
 
     methods: {
-    
+        getArticleInfo() {
+            const path = 'http://localhost:5000/api/articleInfo'
+            axios.get(path)
+            .then(
+                response => {
+                this.articleInfo = response.data.articleInfo 
+            })
+            .catch(
+                error => {
+                    console.log(error)
+                }
+            )
+        }
     },
 
     created () {
-    
+        this.getArticleInfo()
     }
 
 }
