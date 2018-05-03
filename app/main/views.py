@@ -4,6 +4,7 @@ from . import main
 from .forms import NameForm
 from flask import render_template, jsonify,send_from_directory
 from  flask_login import login_required
+from flask import request
 import os
 #带斜线会默认所有的URL都带斜线
 
@@ -42,8 +43,15 @@ def randomNumber():
     response.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
     return response
 
-@main.route('/api/html')
+@main.route('/api/articleInfo')
 def htmltest():
-    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "")  # html是个文件夹
+    s = [ { 'name':'test1', 'id':1},{ 'name':'test2', 'id':2}]
+    return jsonify(s)
+
+
+@main.route('/api/article')
+def articleInfo():
+    print(request.args.get('articleid'))
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..\static")  # html是个文件夹
     print(root)
     return send_from_directory(root, 'test.html')

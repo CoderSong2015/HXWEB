@@ -18,7 +18,7 @@
                 <ul>
                     <li v-for="item in articleInfo">
                          
-                        <router-link :to="{ name: 'about', params: { userId: 123 }}">{{ item.name }}</router-link>
+                        <router-link :to="{ name: 'article', params: { articleId: item.id }}">{{ item.name }}</router-link>
                     </li>
                     
                 </ul>          
@@ -48,7 +48,8 @@ export default {
             axios.get(path)
             .then(
                 response => {
-                this.articleInfo = response.data.articleInfo 
+                this.articleInfo = response.data
+                console.log(this.articleInfo)
             })
             .catch(
                 error => {
