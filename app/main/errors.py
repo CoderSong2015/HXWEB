@@ -1,3 +1,4 @@
+#coding=utf-8
 __author__ = 'Mrsong'
 
 from flask import render_template

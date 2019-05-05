@@ -1,3 +1,4 @@
+#coding=utf-8
 __author__ = 'Mrsong'
 
 from . import main
@@ -6,8 +7,7 @@ from flask import render_template, jsonify,send_from_directory
 from  flask_login import login_required
 from flask import request
 import os
-from  common.markdownCMD import convertMDtoHTML
-#带斜线会默认所有的URL都带斜线
+from  ..common.markdownCMD import convertMDtoHTML
 
 @main.route('/hello/')
 @login_required
@@ -53,7 +53,7 @@ def htmltest():
 @main.route('/api/article')
 def articleInfo():
     articleid = (request.args.get('articleid'))
-    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..\static")  # html是个文件夹
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..\static")  
     fileurl = root +  '\\test.md'
     print(fileurl)
     return convertMDtoHTML(fileurl)
